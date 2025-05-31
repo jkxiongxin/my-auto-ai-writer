@@ -1,0 +1,91 @@
+<section id="generate" class="section">
+    <div class="generate-form">
+        <h2><i class="fas fa-magic"></i> 创建新小说</h2>
+
+        <form id="novelForm">
+            <div class="form-group">
+                <label for="title">小说标题 *</label>
+                <input type="text" id="title" name="title" required
+                       placeholder="为您的小说起一个精彩的标题">
+            </div>
+
+            <div class="form-group">
+                <label for="userInput">创意描述 *</label>
+                <textarea id="userInput" name="userInput" required
+                          placeholder="描述您的故事创意，例如：一个年轻法师踏上拯救王国的旅程..."></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="targetWords">目标字数 *</label>
+                    <select id="targetWords" name="targetWords" required>
+                        <option value="1000">微小说 (1,000字)</option>
+                        <option value="3000">短篇 (3,000字)</option>
+                        <option value="10000" selected>短篇+ (10,000字)</option>
+                        <option value="30000">中篇 (30,000字)</option>
+                        <option value="50000">中篇+ (50,000字)</option>
+                        <option value="100000">长篇 (100,000字)</option>
+                        <option value="300000">长篇+ (300,000字)</option>
+                        <option value="800000">长篇++ (800,000字)</option>
+                        <option value="2000000">超长篇 (200万字)</option>
+                        <option value="3500000">超长篇+ (350万字)</option>
+                        <option value="5000000">史诗级 (500万字)</option>
+                        <option value="8000000">史诗级+ (800万字)</option>
+                        <option value="10000000">巨著 (1000万字)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="stylePreference">风格偏好</label>
+                    <select id="stylePreference" name="stylePreference">
+                        <option value="">自动选择</option>
+                        <option value="科幻">科幻</option>
+                        <option value="奇幻">奇幻</option>
+                        <option value="现实主义">现实主义</option>
+                        <option value="悬疑">悬疑</option>
+                        <option value="言情">言情</option>
+                        <option value="历史">历史</option>
+                        <option value="武侠">武侠</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">小说简介</label>
+                <textarea id="description" name="description"
+                          placeholder="简要描述您的小说内容（可选）"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="previewBtn" class="btn btn-secondary">
+                    <i class="fas fa-eye"></i> 预览配置
+                </button>
+                <button type="submit" id="generateBtn" class="btn btn-primary">
+                    <i class="fas fa-magic"></i> 开始生成
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="generationProgress" class="progress-container" style="display: none;">
+        <h3>正在生成您的小说...</h3>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%"></div>
+        </div>
+        <div class="progress-info">
+            <span id="progressText">初始化...</span>
+            <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-steps">
+            <div class="step" data-step="概念扩展">概念扩展</div>
+            <div class="step" data-step="策略选择">策略选择</div>
+            <div class="step" data-step="大纲生成">大纲生成</div>
+            <div class="step" data-step="角色创建">角色创建</div>
+            <div class="step" data-step="章节生成">章节生成</div>
+            <div class="step" data-step="质量检查">质量检查</div>
+        </div>
+        <button type="button" id="cancelBtn" class="btn btn-danger">
+            <i class="fas fa-stop"></i> 取消生成
+        </button>
+    </div>
+</section>

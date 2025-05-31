@@ -1,0 +1,31 @@
+<section id="projects" class="section">
+    <div class="projects-header">
+        <h2><i class="fas fa-folder"></i> 我的项目</h2>
+        <div class="projects-controls">
+            <input type="text" id="searchProjects" placeholder="搜索项目...">
+            <select id="filterStatus">
+                <option value="">所有状态</option>
+                <option value="completed">已完成</option>
+                <option value="running">生成中</option>
+                <option value="failed">失败</option>
+                <option value="cancelled">已取消</option>
+            </select>
+            <button id="refreshProjects" class="btn btn-secondary">
+                <i class="fas fa-sync-alt"></i> 刷新
+            </button>
+        </div>
+    </div>
+
+    <div id="projectsList" class="projects-grid">
+        <!-- 项目卡片将在这里动态加载 -->
+    </div>
+
+    <div id="noProjects" class="no-data" style="display: none;">
+        <i class="fas fa-folder-open"></i>
+        <h3>暂无项目</h3>
+        <p>您还没有创建任何小说项目</p>
+        <button class="btn btn-primary" onclick="showSection('generate')">
+            <i class="fas fa-plus"></i> 创建首个项目
+        </button>
+    </div>
+</section>
