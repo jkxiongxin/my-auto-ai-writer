@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小说详情 - [Novel Title Placeholder]</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming shared styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Optional: Include a common header if desired, or link back to main page -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-book-reader"></i> <!-- Different icon for detail page -->
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">AI智能小说生成器</a> / <span id="novelDetailTitle">小说详情</span></h1>
+            </div>
+            <!-- Simplified Nav for detail page, or remove if not needed -->
+            <nav class="nav">
+                 <a href="index.html#projects" class="nav-link"><i class="fas fa-arrow-left"></i> 返回项目列表</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="novel-detail-container">
+                <h2 id="novelTitleHeader">[Novel Title Placeholder]</h2>
+
+                <div class="tabs">
+                    <div class="tab-link active" data-tab="worldview">
+                        <i class="fas fa-globe-americas"></i> 世界观
+                    </div>
+                    <div class="tab-link" data-tab="outline">
+                        <i class="fas fa-sitemap"></i> 大纲
+                    </div>
+                    <div class="tab-link" data-tab="storyline">
+                        <i class="fas fa-project-diagram"></i> 故事线
+                    </div>
+                    <div class="tab-link" data-tab="characters">
+                        <i class="fas fa-users"></i> 角色
+                    </div>
+                    <div class="tab-link" data-tab="chapters">
+                        <i class="fas fa-book-open"></i> 章节
+                    </div>
+                </div>
+
+                <div id="worldview" class="tab-content active">
+                    <h3>世界观</h3>
+                    <p>这里将展示小说的世界观设定...</p>
+                    <!-- Content for Worldview -->
+                </div>
+
+                <div id="outline" class="tab-content">
+                    <h3>大纲</h3>
+                    <p>这里将展示小说的主要大纲...</p>
+                    <!-- Content for Outline -->
+                </div>
+
+                <div id="storyline" class="tab-content">
+                    <h3>故事线</h3>
+                    <p>这里将展示小说的故事线发展...</p>
+                    <!-- Content for Storyline -->
+                </div>
+
+                <div id="characters" class="tab-content">
+                    <h3>角色</h3>
+                    <div class="character-view-toggle">
+                        <button id="charListViewBtn" class="active" data-view="list">列表视图</button>
+                        <button id="charGraphViewBtn" data-view="graph">关系图视图</button>
+                    </div>
+                    <div id="characterListView">
+                        <p>角色列表将在这里展示...</p>
+                        <ul>
+                            <li>角色1: 描述...</li>
+                            <li>角色2: 描述...</li>
+                        </ul>
+                    </div>
+                    <div id="characterGraphView" style="display: none;">
+                        <p>角色关系图将在这里展示...</p>
+                        <!-- Placeholder for graph -->
+                        <img src="https://via.placeholder.com/600x300.png?text=角色关系图示例" alt="角色关系图示例" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+
+                <div id="chapters" class="tab-content">
+                    <h3>章节</h3>
+                    <div class="chapters-layout">
+                        <div class="chapter-list-container">
+                            <h4>章节列表</h4>
+                            <ul id="chapterList">
+                                <li class="chapter-list-item active" data-chapter-id="1">第一章：冒险的开端</li>
+                                <li class="chapter-list-item" data-chapter-id="2">第二章：意外的相遇</li>
+                                <li class="chapter-list-item" data-chapter-id="3">第三章：古老的预言</li>
+                                <!-- More chapters dynamically -->
+                            </ul>
+                        </div>
+                        <div class="chapter-content-container">
+                            <h4 id="chapterTitle">第一章：冒险的开端</h4>
+                            <div id="chapterContentView">
+                                <p>这里是第一章的内容...</p>
+                                <p>随着晨曦的第一缕阳光洒落在艾尔文村，年轻的艾拉从梦中醒来，心中充满了对未知的渴望。她并不知道，今天的日常采药之旅，将会是她波澜壮阔冒险人生的真正起点。</p>
+                                <!-- Chapter content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Optional: Common footer -->
+        <!-- <footer class="footer"> ... </footer> -->
+    </div>
+
+    <script src="novel-detail.js" defer></script>
+</body>
+</html>
