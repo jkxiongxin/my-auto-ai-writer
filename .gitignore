@@ -169,7 +169,6 @@ secrets.json
 api_keys.txt
 
 # Model files (large files)
-models/
 *.bin
 *.onnx
 *.pkl
